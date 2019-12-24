@@ -50,7 +50,7 @@ class CecoController extends Controller{
   //
   public function ceco($request,$response){
 
-    $index = $this->modules['ceco']->index();
+    $index = $this->modules['ceco']->ceco();
     //preparamos respuesta
     $response1 = $response->withJson($sociedadSap,201);
     $response2 = $response1
@@ -60,7 +60,7 @@ class CecoController extends Controller{
 
   }
   //
-  public function departamento($request,$response){
+  public function idDepartamento($request,$response){
 
     $index = $this->modules['ceco']->index();
     //preparamos respuesta
@@ -74,7 +74,7 @@ class CecoController extends Controller{
   //
   public function area($request,$response){
 
-    $index = $this->modules['ceco']->index();
+    $index = $this->modules['ceco']->area();
     //preparamos respuesta
     $response1 = $response->withJson($sociedadSap,201);
     $response2 = $response1
