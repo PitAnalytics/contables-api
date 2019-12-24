@@ -38,21 +38,20 @@ class CecoController extends Controller{
   public function index($request,$response){
 
     $index = $this->modules['ceco']->index();
-    //preparamos respuesta
-    $response = json_encode($index);
-    $response1 = $response
-    ->withHeader('Content-type','application/json; charset=utf-8')
+    //respuesta con cabeceras http
+    $response1 = $response->withJson($index,201);
+    $response2 = $response1
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    return $response1;
+    return $response2;
 
   }
   //
   public function ceco($request,$response){
 
-    $index = $this->modules['ceco']->ceco();
-    //preparamos respuesta
-    $response1 = $response->withJson($sociedadSap,201);
+    $ceco = $this->modules['ceco']->ceco();
+    //respuesta con cabeceras http
+    $response1 = $response->withJson($ceco,201);
     $response2 = $response1
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
