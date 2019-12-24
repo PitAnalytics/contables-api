@@ -50,7 +50,7 @@ class BsegController extends Controller{
   public function fecha($request,$response){
 
     $fecha = $this->modules['bseg']->fecha();
-    $response1 = $response->withJson($index,201);
+    $response1 = $response->withJson($fecha,201);
     $response2 = $response1
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
@@ -58,7 +58,7 @@ class BsegController extends Controller{
   }
   public function moneda($request,$response){
 
-    $moneda = $this->modules['bseg']->fecha();
+    $moneda = $this->modules['bseg']->moneda();
     $response1 = $response->withJson($moneda,201);
     $response2 = $response1
     ->withHeader('Access-Control-Allow-Origin', '*')
@@ -68,8 +68,8 @@ class BsegController extends Controller{
   }
   public function sociedadSap($request,$response){
 
-    $moneda = $this->modules['bseg']->fecha();
-    $response1 = $response->withJson($moneda,201);
+    $sociedadSap = $this->modules['bseg']->sociedadSap();
+    $response1 = $response->withJson($sociedadSap,201);
     $response2 = $response1
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
@@ -78,12 +78,13 @@ class BsegController extends Controller{
   }
   public function tipoDocumento($request,$response){
 
-    $moneda = $this->modules['bseg']->fecha();
-    $response1 = $response->withJson($moneda,201);
+    $tipoDocumento = $this->modules['bseg']->tipoDocumento();
+    $response1 = $response->withJson($tipoDocumento,201);
     $response2 = $response1
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     return $response2;
+
   }
 
 }
