@@ -40,50 +40,63 @@ class BsegController extends Controller{
   public function index($request,$response){
 
     $index = $this->modules['bseg']->index();
-    $response1 = $response->withJson($index,201);
-    $response2 = $response1
+    //preparamos respuesta
+    $response = json_encode($index);
+    $response1 = $response
+    ->withHeader('Content-type','application/json; charset=utf-8')
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    return $response2;
+    return $response1;
 
   }
   public function fecha($request,$response){
 
     $fecha = $this->modules['bseg']->fecha();
-    $response1 = $response->withJson($fecha,201);
-    $response2 = $response1
+    //preparamos respuesta
+    $response = json_encode($fecha);
+    $response1 = $response
+    ->withHeader('Content-type','application/json; charset=utf-8')
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    return $response2;
+    return $response1;
+
   }
   public function moneda($request,$response){
 
     $moneda = $this->modules['bseg']->moneda();
-    $response1 = $response->withJson($moneda,201);
-    $response2 = $response1
+    //preparamos respuesta
+    $response = json_encode($moneda);
+    $response1 = $response
+    ->withHeader('Content-type','application/json; charset=utf-8')
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    return $response2;
+    return $response1;
 
   }
   public function sociedadSap($request,$response){
 
     $sociedadSap = $this->modules['bseg']->sociedadSap();
-    $response1 = $response->withJson($sociedadSap,201);
-    $response2 = $response1
+
+    //preparamos respuesta
+    $response = json_encode($sociedadSap);
+    $response1 = $response
+    ->withHeader('Content-type','application/json; charset=utf-8')
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    return $response2;
+    return $response1;
 
   }
   public function tipoDocumento($request,$response){
 
     $tipoDocumento = $this->modules['bseg']->tipoDocumento();
-    $response1 = $response->withJson($tipoDocumento,201);
-    $response2 = $response1
+
+    //preparamos respuesta
+    $response = json_encode($tipoDocumento);
+    $response1 = $response
+    ->withHeader('Content-type','application/json; charset=utf-8')
     ->withHeader('Access-Control-Allow-Origin', '*')
     ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
-    return $response2;
+    return $response1;
 
   }
 
