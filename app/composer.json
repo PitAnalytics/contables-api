@@ -4,12 +4,8 @@
         "google/cloud-bigquery": "^1.12"
     },
     "autoload":{
-
         "psr-4": {
-
             "App\\":"src"
-
         }
-
     }
 }
