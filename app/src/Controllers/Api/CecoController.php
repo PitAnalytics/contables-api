@@ -47,6 +47,42 @@ class CecoController extends Controller{
     return $response1;
 
   }
+  //
+  public function ceco($request,$response){
+
+    $index = $this->modules['ceco']->index();
+    //preparamos respuesta
+    $response1 = $response->withJson($sociedadSap,201);
+    $response2 = $response1
+    ->withHeader('Access-Control-Allow-Origin', '*')
+    ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    return $response2;
+
+  }
+  //
+  public function departamento($request,$response){
+
+    $index = $this->modules['ceco']->index();
+    //preparamos respuesta
+    $response1 = $response->withJson($sociedadSap,201);
+    $response2 = $response1
+    ->withHeader('Access-Control-Allow-Origin', '*')
+    ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    return $response2;
+
+  }
+  //
+  public function area($request,$response){
+
+    $index = $this->modules['ceco']->index();
+    //preparamos respuesta
+    $response1 = $response->withJson($sociedadSap,201);
+    $response2 = $response1
+    ->withHeader('Access-Control-Allow-Origin', '*')
+    ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    return $response2;
+
+  }
 
 }
 

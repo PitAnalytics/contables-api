@@ -32,4 +32,14 @@ $container['bseg']=function($container){
     };
 
 };
+//
+$container['ceco']=function($container){
+
+    return function($bigquery){
+
+        return new App\Modules\Concrete\Ceco($bigquery);
+
+    };
+
+};
 ?>
