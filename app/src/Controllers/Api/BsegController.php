@@ -39,7 +39,12 @@ class BsegController extends Controller{
   //
   public function index($request,$response){
 
-    $this->modules['bseg']->index();
+    $index = $this->modules['bseg']->index();
+    $response1 = $response->withJson($index,201);
+    $response2 = $response1
+    ->withHeader('Access-Control-Allow-Origin', '*')
+    ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
+    return $response2;
 
   }
   public function fecha($request,$response){
