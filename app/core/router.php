@@ -6,5 +6,5 @@ $app->get('/bseg/sociedad-sap', \App\Controllers\Api\BsegController::class.':soc
 $app->get('/bseg/tipo-documento', \App\Controllers\Api\BsegController::class.':tipoDocumento');
 //
 $app->get('/ceco', \App\Controllers\Api\CecoController::class.':index');
-$app->get('/ceco/ceco', \App\Controllers\Api\CecoController::class.':index');
+$app->get('/ceco/ceco', \App\Controllers\Api\CecoController::class.':ceco');
 ?>
