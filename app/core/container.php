@@ -42,4 +42,14 @@ $container['ceco']=function($container){
     };
 
 };
+//
+$container['departamento']=function($container){
+
+    return function($bigquery){
+
+        return new App\Modules\Concrete\Departamento($bigquery);
+
+    };
+
+};
 ?>

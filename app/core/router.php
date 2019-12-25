@@ -7,4 +7,8 @@ $app->get('/bseg/tipo-documento', \App\Controllers\Api\BsegController::class.':t
 //
 $app->get('/ceco', \App\Controllers\Api\CecoController::class.':index');
 $app->get('/ceco/ceco', \App\Controllers\Api\CecoController::class.':ceco');
+//
+$app->get('/departamento', \App\Controllers\Api\DepartamentoController::class.':index');
+$app->get('/departamento/id-departamento', \App\Controllers\Api\DepartamentoController::class.':idDepartamento');
+$app->get('/departamento/area', \App\Controllers\Api\DepartamentoController::class.':area');
 ?>
