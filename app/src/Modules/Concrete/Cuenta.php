@@ -25,7 +25,7 @@ class Cuenta extends Connection{
   }
   public function cuenta(){
 
-    $sql="SELECT DISTINCT(cuenta) 
+    $sql="SELECT DISTINCT(cuenta) AS cuenta 
     FROM 
     (SELECT 
         Conceptos.id AS idConcepto, 
@@ -37,7 +37,7 @@ class Cuenta extends Connection{
       INNER JOIN
         `pit-analytics-2019.QLIK.Cuentas` AS Cuentas
       ON
-        Conceptos.id = Cuentas.idConcepto)";
+        Conceptos.id = Cuentas.idConcepto);";
     return $this->bigquery->query($sql);
 
   }
