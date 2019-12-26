@@ -14,4 +14,6 @@ $app->get('/departamento/area', \App\Controllers\Api\DepartamentoController::cla
 //
 $app->get('/cuenta', \App\Controllers\Api\CuentaController::class.':index');
 $app->get('/cuenta/cuenta', \App\Controllers\Api\CuentaController::class.':cuenta');
+$app->get('/cuenta/concepto', \App\Controllers\Api\CuentaController::class.':concepto');
+$app->get('/cuenta/super-concepto', \App\Controllers\Api\CuentaController::class.':superConcepto');
 ?>

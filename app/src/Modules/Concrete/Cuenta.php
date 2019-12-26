@@ -59,6 +59,24 @@ class Cuenta extends Connection{
     return $this->bigquery->query($sql);
 
   }
+  public function superConcepto(){
+
+    $sql="SELECT DISTINCT(superConcepto) AS superConcepto 
+    FROM 
+    (SELECT 
+        Conceptos.id AS idConcepto, 
+        Conceptos.superConcepto AS superConcepto, 
+        Conceptos.concepto AS concepto, 
+        Cuentas.cuenta AS cuenta 
+      FROM
+        `pit-analytics-2019.QLIK.Conceptos` AS Conceptos
+      INNER JOIN
+        `pit-analytics-2019.QLIK.Cuentas` AS Cuentas
+      ON
+        Conceptos.id = Cuentas.idConcepto);";
+    return $this->bigquery->query($sql);
+
+  }
 
 }
 ?>
