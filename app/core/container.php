@@ -52,4 +52,14 @@ $container['departamento']=function($container){
     };
 
 };
+//
+$container['cuenta']=function($container){
+
+    return function($bigquery){
+
+        return new App\Modules\Concrete\Cuenta($bigquery);
+
+    };
+
+};
 ?>
