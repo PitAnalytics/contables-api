@@ -11,4 +11,7 @@ $app->get('/ceco/ceco', \App\Controllers\Api\CecoController::class.':ceco');
 $app->get('/departamento', \App\Controllers\Api\DepartamentoController::class.':index');
 $app->get('/departamento/id-departamento', \App\Controllers\Api\DepartamentoController::class.':idDepartamento');
 $app->get('/departamento/area', \App\Controllers\Api\DepartamentoController::class.':area');
+//
+$app->get('/cuenta', \App\Controllers\Api\CuentaController::class.':index');
+$app->get('/cuenta/cuenta', \App\Controllers\Api\CuentaController::class.':cuenta');
 ?>
